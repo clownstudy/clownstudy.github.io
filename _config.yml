@@ -92,13 +92,12 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
+
 # Site Author
 author:
   name             : "Clown"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "매일 작성하는 개발일기"
-  location         : "Somewhere"
-  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -280,3 +279,23 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+        nav: "docs"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      sidebar:
+        nav: "docs"
+
+  # _categories
+  - scope:
+      path: "/categories"
+      type: pages
+    values:
+      layout: single
+      sidebar:
+        nave: "docs"
