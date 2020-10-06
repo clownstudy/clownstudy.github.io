@@ -16,11 +16,11 @@ main:
     url: /categories/
   - title: "tag"
     url: /tags/ 
-test1:
-  - title: "테스트"
 
 docs:
   - title: 카테고리
     children:
       - title: "Do it JAVA"
         url: /categories/#do-it-java
+      - title: "Colosseum"
+        url: /categories/#colosseum
