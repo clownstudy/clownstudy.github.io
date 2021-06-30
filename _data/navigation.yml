@@ -10,12 +10,12 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "JAVA"
-    url: /tags/#java
+  #- title: "JAVA"
+  #  url: /tags/#java
   - title: "category"
     url: /categories/
   - title: "tag"
-    url: /tags/ 
+    url: /tags/
 
 docs:
   - title: 카테고리
@@ -24,3 +24,5 @@ docs:
         url: /categories/#do-it-java
       - title: "Colosseum"
         url: /categories/#colosseum
+      - title: "CodeWars"
+        url: /categories/#codewars
