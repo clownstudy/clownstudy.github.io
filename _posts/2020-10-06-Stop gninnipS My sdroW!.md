@@ -4,7 +4,7 @@ title: "Stop gninnipS My sdroW!"
 categories:
     - CodeWar
 tags:
-    - codewar
+    - codewars
     - algorithm
 toc: true
 toc_label: "목차"
