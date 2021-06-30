@@ -94,6 +94,7 @@ decodeMorse = function(morseCode){
     </summary>
     <div markdown="1">
 심히 부끄럽지만 남겨놓는다..
+<font size="3">
 <pre>
 decodeMorse = function(morseCode){
   let reg = /^\s{0,}/g
@@ -111,6 +112,7 @@ decodeMorse = function(morseCode){
          .join('')).join(' ')
 }
 </pre>
+</font>
     </div>
 </details>
 
