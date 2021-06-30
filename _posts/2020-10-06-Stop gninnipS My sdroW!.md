@@ -2,7 +2,7 @@
 title: "Stop gninnipS My sdroW!"
 
 categories:
-    - CodeWar
+    - CodeWars
 tags:
     - codewars
     - algorithm
@@ -68,6 +68,5 @@ function spinWords(string){
 </pre>
 </div>
 </details>
-
 
 
