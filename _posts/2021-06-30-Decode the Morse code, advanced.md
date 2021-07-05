@@ -48,7 +48,7 @@ That said, your task is to implement two functions:
 
 1. Function `decodeBits(bits)`, that should find out the transmission rate of the message, correctly decode the message to dots `.`, dashes `-` and spaces (one between characters, three between words) and return those as a string. Note that some extra `0`'s may naturally occur at the beginning and the end of a message, make sure to ignore them. Also if you have trouble discerning if the particular sequence of `1`'s is a dot or a dash, assume it's a dot.
 
-\2. Function `decodeMorse(morseCode)`, that would take the output of the previous function and return a human-readable string.
+2. Function `decodeMorse(morseCode)`, that would take the output of the previous function and return a human-readable string.
 
 **NOTE:** For coding purposes you have to use ASCII characters `.` and `-`, not Unicode characters.
 
@@ -78,8 +78,10 @@ morseCodes(".--") //to access the morse translation of ".--"
     </summary>
     <div markdown="1">
 심히 부끄럽지만 남겨놓는다..
+<font size="3">
 <pre>
 </pre>
+</font>
     </div>
 </details>
 
