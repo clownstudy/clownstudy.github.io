@@ -1,5 +1,5 @@
 ---
-title: "Stop gninnipS My sdroW!"
+title: "Bit Counting"
 
 categories:
     - CodeWars
@@ -12,36 +12,47 @@ toc_sticky: true
 ---
 ## Kata Description
 
-Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (like the name of this kata).
-
-- Strings passed in will consist of only letters and spaces.
-- Spaces will be included only when more than one word is present.
+Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
 
 **Examples:**
 
 ```
-spinWords("Hey fellow warriors") => "Hey wollef sroirraw" 
-spinWords("This is a test") => "This is a test" 
-spinWords("This is another test") => "This is rehtona test"
+The binary representation of `1234` is `10011010010`, so the function should return `5` in this case
+
+n == 4 -> 100 ==> 1
+n == 8 -> 1000 ==> 1
+n == 9 -> 1001 ==> 2
 ```
 
-## Best Practice
+## Best Practice && Clever
 
 ```javascript
-function spinWords(words){
-  return words.split(' ').map(function (word) {
-    return (word.length > 4) ? word.split('').reverse().join('') : word;
-  }).join(' ');
-}
+countBits = n => n.toString(2).split('0').join('').length;
 ```
 
-## Clever
+## Others
 
 ```javascript
-function spinWords(string){
-  return string.replace(/\w{5,}/g, function(w) {
-      return w.split('').reverse().join('') })
+function countBits(n) {
+  for(c=0;n;n>>=1)c+=n&1
+  return c;
 }
+
+var countBits = function(n) {
+  var count = 0;
+  while(n > 0){
+    if(n%2 === 1) {
+      count++;
+    }
+    n = Math.floor(n/2);
+  }
+  return count;
+};
+
+const countBits = n => n.toString(2)
+                        .split('')
+                        .filter(ele => ele == 1)
+                        .length
 ```
 
 
@@ -56,15 +67,14 @@ function spinWords(string){
     <div markdown="1">
 심히 부끄럽지만 남겨놓는다..
 <pre>
-function spinWords(string){
-  let sep = string.split(' ');
-  let newA = [];
-  sep.forEach(s => {
-    if (s.lenth >= 5) s = s.split('').reverse().join('');
-    newA.push(s);
-  })
-  return newA.join('').toString();
-}
+var countBits = function(n) {
+  let cnt = 0;
+  let arr = n.toString(2).split('');
+  arr.map((x)=>{x==1?cnt++:0})
+  return cnt
+};
+// map이 아니라 걸러내는거기 때문에 filter로 썼어도 되지 않았을까..
+// 애초에 0으로 split하면 1만남는걸 생각 했었더라면..
 </pre>
 </div>
 </details>
